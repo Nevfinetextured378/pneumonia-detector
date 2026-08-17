@@ -1,0 +1,71 @@
+.image-comparison {
+  margin-top: 16px;
+}
+
+.comparison-title {
+  font-size: 1.05rem;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #eef2ff;
+  color: #374151;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.image-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.image-panel img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-panel:hover img {
+  transform: scale(1.03);
+}
+
+.image-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.original-badge {
+  background: rgba(55, 65, 81, 0.85);
+  color: white;
+}
+
+.gradcam-badge {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.comparison-caption {
+  margin: 12px 0 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,145 @@
+/* ===== 上传区域容器 ===== */
+.upload-zone {
+  border: 2px dashed #c7d2fe;
+  border-radius: 16px;
+  padding: 40px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fafbff;
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-zone.drag-active {
+  border-color: #4f46e5;
+  border-style: solid;
+  background: #eef2ff;
+  transform: scale(1.01);
+  box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.1);
+}
+
+.upload-zone.has-file {
+  border-style: solid;
+  border-color: #e5e7eb;
+  padding: 20px;
+  background: white;
+  cursor: default;
+}
+
+/* ===== 隐藏的 input ===== */
+.upload-input-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ===== 空状态 ===== */
+.upload-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.upload-icon {
+  opacity: 0.6;
+  margin-bottom: 4px;
+}
+
+.upload-hint {
+  margin: 0;
+  line-height: 1.6;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.upload-hint strong {
+  color: #111827;
+}
+
+.upload-formats {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* ===== 已选文件状态 ===== */
+.upload-with-file {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preview-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.preview-image {
+  max-height: 280px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.upload-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ===== 按钮 ===== */
+.submit-btn {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 999px;
+  background: #4f46e5;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.re-select-btn {
+  padding: 10px 24px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 999px;
+  background: white;
+  color: #374151;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.re-select-btn:hover:not(:disabled) {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.re-select-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
