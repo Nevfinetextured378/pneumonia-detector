@@ -1,0 +1,42 @@
+{
+  "model": "resnet50",
+  "checkpoint": "models\\best_model.pth",
+  "device": "cuda",
+  "test_size": 624,
+  "class_distribution": {
+    "NORMAL": 234,
+    "PNEUMONIA": 390
+  },
+  "metrics": {
+    "accuracy": 0.8381410256410257,
+    "precision_pneumonia": 0.883289124668435,
+    "recall_pneumonia": 0.8538461538461538,
+    "f1_pneumonia": 0.8683181225554107,
+    "roc_auc": 0.906563664255972
+  },
+  "per_class": {
+    "NORMAL": {
+      "precision": 0.7692307692307693,
+      "recall": 0.811965811965812,
+      "f1": 0.7900207900207901,
+      "support": 234
+    },
+    "PNEUMONIA": {
+      "precision": 0.883289124668435,
+      "recall": 0.8538461538461538,
+      "f1": 0.8683181225554107,
+      "support": 390
+    }
+  },
+  "confusion_matrix": [
+    [
+      190,
+      44
+    ],
+    [
+      57,
+      333
+    ]
+  ],
+  "evaluated_at": "2026-08-17 09:44:01"
+}

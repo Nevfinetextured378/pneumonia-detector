@@ -104,12 +104,17 @@ pneumonia-detector/
 │       └── helpers.py          #   工具函数
 ├── scripts/
 │   ├── train.py                #   训练入口脚本
+│   ├── evaluate.py             #   测试集评估脚本
 │   └── download_dataset.py     #   数据集下载 & 检查工具
 ├── notebooks/
 │   └── 01_data_exploration.ipynb  # 数据探索 Notebook
 ├── models/
 │   ├── best_model.pth          #   最佳模型权重（训练后生成）
 │   └── model_info.json         #   训练元信息
+├── results/                    #   评估结果（运行 evaluate.py 生成）
+│   ├── evaluation_report.json  #   测试集指标
+│   ├── confusion_matrix.png    #   混淆矩阵
+│   └── roc_curve.png           #   ROC 曲线
 ├── data/chest_xray/            #   数据集（需自行下载）
 ├── pyproject.toml              #   项目配置 & 依赖
 ├── README.md                   #   本文件
@@ -222,10 +227,16 @@ Health check endpoint.
 |--------|-------|
 | Model | ResNet-50 (ImageNet pretrained) |
 | Training Data | 5,216 chest X-ray images |
-| Best Validation Accuracy | **88.48%** |
-| Test Accuracy | Varies (see training output) |
+| Validation Accuracy | **88.48%** |
+| Test Accuracy | **83.81%** |
+| Test Precision (PNEUMONIA) | 88.33% |
+| Test Recall (PNEUMONIA) | 85.38% |
+| Test F1-Score (PNEUMONIA) | 86.83% |
+| Test ROC-AUC | **90.66%** |
 | Training Time | ~25 minutes (NVIDIA GPU) |
 | Inference Time | ~150ms per image (GPU) |
+
+Test metrics are computed on the 624 held-out images via `python scripts/evaluate.py`; the confusion matrix and ROC curve are saved under `results/`.
 
 **Dataset:** [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) by Paul Mooney
 
@@ -380,9 +391,16 @@ npm run dev
 |------|------|
 | 模型 | ResNet-50（ImageNet 预训练） |
 | 训练数据 | 5,216 张胸部X光片 |
-| 最佳验证准确率 | **88.48%** |
+| 验证集准确率 | **88.48%** |
+| 测试集准确率 | **83.81%** |
+| 测试集精确率（肺炎） | 88.33% |
+| 测试集召回率（肺炎） | 85.38% |
+| 测试集 F1（肺炎） | 86.83% |
+| 测试集 ROC-AUC | **90.66%** |
 | 训练耗时 | ~25 分钟（GPU） |
 | 推理耗时 | ~150ms/张（GPU） |
+
+测试集指标在 624 张独立测试图片上计算，运行 `python scripts/evaluate.py` 可复现；混淆矩阵和 ROC 曲线保存在 `results/` 目录。
 
 **数据集**: [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
