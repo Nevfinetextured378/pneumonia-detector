@@ -39,7 +39,7 @@ This project was developed as an undergraduate research project at Zhejiang Univ
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                     User (Browser)                          │
-│                  http://localhost:3000                       │
+│                  http://localhost:5173                       │
 └─────────────────────┬───────────────────────────────────────┘
                       │  HTTP Request (multipart/form-data)
                       ▼
@@ -132,7 +132,7 @@ pneumonia-detector/
 #### 1. Clone & Setup Environment
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/pneumonia-detector.git
+git clone https://github.com/3495735391-cyber/pneumonia-detector.git
 cd pneumonia-detector
 
 # Create virtual environment
@@ -178,7 +178,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser.
+Open http://localhost:5173 in your browser.
 
 #### 6. Use the System
 
@@ -296,7 +296,7 @@ This project is licensed under the MIT License — see the [LICENSE](./LICENSE) 
 ### 系统架构
 
 ```
-用户浏览器 (:3000)
+用户浏览器 (:5173)
     │  HTTP 请求（上传图片）
     ▼
 FastAPI 后端 (:8000)
@@ -332,7 +332,7 @@ FastAPI 后端 (:8000)
 
 ```bash
 # 克隆项目
-git clone https://github.com/YOUR_USERNAME/pneumonia-detector.git
+git clone https://github.com/3495735391-cyber/pneumonia-detector.git
 cd pneumonia-detector
 
 # 创建虚拟环境
@@ -375,12 +375,12 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 cd frontend
 npm install
 npm run dev
-# 打开: http://localhost:3000
+# 打开: http://localhost:5173
 ```
 
 #### 6. 使用系统
 
-1. 打开网页 http://localhost:3000
+1. 打开网页 http://localhost:5173
 2. 选择一张胸部X光图片
 3. 点击「开始检测」
 4. 查看预测结果和 Grad-CAM 热力图

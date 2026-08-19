@@ -33,7 +33,7 @@ start "ChestLens-API" cmd /k "uvicorn app.main:app --host 0.0.0.0 --port 8000 --
 echo        等待后端启动中...
 timeout /t 5 /nobreak >nul
 
-echo [2/2] 启动 React 前端 (端口 3000)...
+echo [2/2] 启动 React 前端 (端口 5173)...
 cd frontend
 
 :: 检查 node_modules
@@ -48,7 +48,7 @@ cd ..
 echo.
 echo ============================================
 echo   启动完成！
-echo   前端: http://localhost:3000
+echo   前端: http://localhost:5173
 echo   后端: http://localhost:8000
 echo   API文档: http://localhost:8000/docs
 echo ============================================

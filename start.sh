@@ -37,7 +37,7 @@ echo "      后端 PID: $BACKEND_PID"
 
 sleep 3
 
-echo "[2/2] 启动 React 前端 (端口 3000)..."
+echo "[2/2] 启动 React 前端 (端口 5173)..."
 cd frontend
 
 if [ ! -d "node_modules" ]; then
@@ -52,7 +52,7 @@ cd ..
 echo ""
 echo "============================================"
 echo "  启动完成！"
-echo "  前端: http://localhost:3000"
+echo "  前端: http://localhost:5173"
 echo "  后端: http://localhost:8000"
 echo "  API文档: http://localhost:8000/docs"
 echo "============================================"
